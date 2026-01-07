@@ -755,9 +755,10 @@ jupyter notebook notebooks/Predicting_Default_Credit_Card_Friska_Andalusia_CASE_
 | **Nama** | Friska Andalusia |
 | **NIM** | 202022420003 |
 | **Mata Kuliah** | Analisa Keputusan Untuk Teknologi Finansial (AKTF) |
+| **Universitas** | Telkom University, Bandung, Indonesia |
 | **Project** | CASE 6 FINAL: Credit Card Default Prediction |
 | **Best Model** | Ensemble Stacking (Accuracy 82.21%) |
 | **GitHub Repository** | https://github.com/friskaa28/Tugas-Besar--AKTF-Friska-Andalusia |
-| **Tahun** | 2024-2025 |
+| **Tahun** | 2025-2026 |
 
 
