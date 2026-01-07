@@ -394,6 +394,8 @@ Strategy: Stratified split
 | S5 | 15 | 2 | 100 | 0.8068 | 0.5223 | 0.7667 | ⚠️ Overfit |
 | S6 | 15 | 10 | 150 | 0.7995 | 0.5295 | 0.7716 | Regularized |
 
+![Hyperparameter Tuning Results](https://user-gen-media-assets.s3.amazonaws.com/seedream_images/9af03834-7827-4143-a370-b5bfd6349e0b.png)
+
 ### Parameter Impact Analysis
 
 #### **max_depth Impact**
@@ -445,7 +447,33 @@ RandomForestClassifier(
 
 ### Architecture: 5 Base Models
 
+![Ensemble Stacking Architecture](https://user-gen-media-assets.s3.amazonaws.com/seedream_images/2b6c0c76-8f14-45ed-8216-0c98e73b1adf.png)
 
+**Architecture Explanation**:
+
+```
+INPUT: Customer Features (28 dimensions)
+    ↓
+┌─────────────────────────────────────────┐
+│    5 Base Models (Parallel Training)    │
+├─────────────────────────────────────────┤
+│ 1. XGBoost          (ROC-AUC: 0.78)    │
+│ 2. Gradient Boosting (ROC-AUC: 0.78)  │
+│ 3. LightGBM         (ROC-AUC: 0.77)    │
+│ 4. Random Forest    (ROC-AUC: 0.77)    │
+│ 5. Logistic Regression (ROC-AUC: 0.74)│
+└─────────────────────────────────────────┘
+    ↓
+Weighted Voting Aggregation
+├─ XGBoost × 0.204 (20.4%)
+├─ GB × 0.204 (20.4%)
+├─ LightGBM × 0.201 (20.1%)
+├─ RF × 0.201 (20.1%)
+└─ LR × 0.193 (19.3%)
+    ↓
+OUTPUT: Final Prediction
+(0=Non-Default, 1=Default)
+```
 
 ### Weighted Voting Mechanism
 
@@ -538,6 +566,8 @@ Higher is better
 
 ### Confusion Matrix (Ensemble Stacking)
 
+![Confusion Matrix](https://user-gen-media-assets.s3.amazonaws.com/seedream_images/45812fbf-7175-4d74-a3d0-c8008809b32d.png)
+
 ```
                  Predicted
               Non-Def  Default
@@ -551,7 +581,9 @@ Metrics derived:
 - FN (885): Missed defaults
 ```
 
-### Feature Importance (Top 10)
+### Feature Importance (Top 15)
+
+![Feature Importance Ranking](https://user-gen-media-assets.s3.amazonaws.com/seedream_images/aa313dd2-d8f2-4625-8f04-4f49b6783be8.png)
 
 | Rank | Feature | Importance |
 |------|---------|-----------|
@@ -574,6 +606,8 @@ Metrics derived:
 
 ### Model Performance Ranking
 
+![Model Performance Comparison](https://user-gen-media-assets.s3.amazonaws.com/seedream_images/1a0adaf7-9001-475e-a6ef-e284f10fed71.png)
+
 | Rank | Model | Accuracy | F1-Score | ROC-AUC | Advantage |
 |------|-------|----------|----------|---------|-----------|
 | 🥇 **1** | **Ensemble Stacking** | **0.8221** 🏆 | **0.5275** | **0.7792** | **✅ BEST** |
@@ -583,6 +617,10 @@ Metrics derived:
 | 5 | LightGBM | ~0.80 | ~0.51 | 0.77 | Memory eff. |
 | 6 | RF S4 | 0.7819 | 0.5311 | 0.7770 | Best RF |
 | 7 | LR | 0.7722 | 0.5241 | 0.7439 | Baseline |
+
+### ROC Curves Comparison
+
+![ROC Curves All Models](https://user-gen-media-assets.s3.amazonaws.com/seedream_images/45812fbf-7175-4d74-a3d0-c8008809b32d.png)
 
 ### Why Ensemble Stacking WINS
 
@@ -647,9 +685,11 @@ If probability < 0.4: AUTO-APPROVE (low default risk)
 ### Installation
 
 ```bash
-# Clone repository
-git clone https://github.com/friskaa28/credit-card-default-prediction.git
-cd credit-card-default-prediction
+# Clone repository (BENAR)
+git clone https://github.com/friskaa28/Tugas-Besar--AKTF-Friska-Andalusia.git
+
+# Masuk ke directory
+cd Tugas-Besar--AKTF-Friska-Andalusia
 
 # Install dependencies
 pip install -r requirements.txt
@@ -717,5 +757,7 @@ jupyter notebook notebooks/Predicting_Default_Credit_Card_Friska_Andalusia_CASE_
 | **Mata Kuliah** | Analisa Keputusan Untuk Teknologi Finansial (AKTF) |
 | **Project** | CASE 6 FINAL: Credit Card Default Prediction |
 | **Best Model** | Ensemble Stacking (Accuracy 82.21%) |
+| **GitHub Repository** | https://github.com/friskaa28/Tugas-Besar--AKTF-Friska-Andalusia |
 | **Tahun** | 2024-2025 |
+
 
