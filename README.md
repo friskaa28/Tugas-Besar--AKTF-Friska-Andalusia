@@ -601,19 +601,11 @@ F1 = 2 × (Precision × Recall) / (Precision + Recall)
 | **Nama Penulis** | Friska Andalusia |
 | **NIM** | 202022420003 |
 | **Mata Kuliah** | Analisa Keputusan Untuk Teknologi Finansial (AKTF) |
-| **Institusi** | [Universitas Anda] |
+| **Institusi** | Telkom University |
 | **Tahun** | 2024-2025 |
 
 ---
 
-## 📞 Support & Questions
-
-Untuk pertanyaan atau issues:
-1. Buka GitHub Issues di repository
-2. Email: [your.email@university.edu]
-3. Konsultasi dengan dosen pembimbing
-
----
 
 ## 📄 License
 
