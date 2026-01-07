@@ -445,28 +445,7 @@ RandomForestClassifier(
 
 ### Architecture: 5 Base Models
 
-```
-INPUT: Customer Features (28 dimensions)
-    ↓
-┌─────────────────────────────────────────┐
-│    5 Base Models (Parallel Training)    │
-├─────────────────────────────────────────┤
-│ 1. XGBoost          (ROC-AUC: 0.78)    │
-│ 2. Gradient Boosting (ROC-AUC: 0.78)  │
-│ 3. LightGBM         (ROC-AUC: 0.77)    │
-│ 4. Random Forest    (ROC-AUC: 0.77)    │
-│ 5. Logistic Regression (ROC-AUC: 0.74)│
-└─────────────────────────────────────────┘
-    ↓
-Weighted Voting Aggregation
-├─ XGBoost × 0.204 (20.4%)
-├─ GB × 0.204 (20.4%)
-├─ LightGBM × 0.201 (20.1%)
-├─ RF × 0.201 (20.1%)
-└─ LR × 0.193 (19.3%)
-    ↓
-OUTPUT: Final Prediction (0=Non-Default, 1=Default)
-```
+
 
 ### Weighted Voting Mechanism
 
@@ -740,5 +719,3 @@ jupyter notebook notebooks/Predicting_Default_Credit_Card_Friska_Andalusia_CASE_
 | **Best Model** | Ensemble Stacking (Accuracy 82.21%) |
 | **Tahun** | 2024-2025 |
 
-
-🎉 **Ensemble Stacking: 5 Models, Best Results, Production Ready!**
