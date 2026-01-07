@@ -589,7 +589,6 @@ F1 = 2 × (Precision × Recall) / (Precision + Recall)
 
 2. Scikit-learn Documentation: https://scikit-learn.org/
 3. SMOTE: Synthetic Minority Over-sampling Technique: https://imbalanced-learn.org/
-
 4. UCI Machine Learning Repository: https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients
 
 ---
@@ -604,8 +603,8 @@ F1 = 2 × (Precision × Recall) / (Precision + Recall)
 | **Institusi** | Telkom University |
 | **Tahun** | 2024-2025 |
 
----
 
+---
 
 ## 📄 License
 
@@ -615,4 +614,3 @@ Project ini dilisensikan di bawah MIT License - lihat file LICENSE untuk detail.
 
 **Last Updated:** January 2026
 **Version:** 1.0.0
-**Status:** ✅ Complete & Production Ready
