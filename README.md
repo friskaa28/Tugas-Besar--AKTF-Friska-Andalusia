@@ -329,7 +329,7 @@ GradientBoostingClassifier(
 ```
 credit-card-default-prediction/
 │
-├── atka.ipynb                          # Main analysis notebook
+├── Predicting_Default_Credit_Card_Friska_Andalusia_CASE_6_FINAL.ipynb                          # Main analysis notebook
 ├── README.md                           # This file
 ├── dataset/
 │   └── default_of_credit_card_clients.csv
@@ -415,16 +415,16 @@ data = pd.read_csv('https://raw.githubusercontent.com/[username]/[repo]/master/d
 
 **Opsi A: Google Colab**
 ```
-1. Buka file atka.ipynb di Google Colab
+1. Buka file Predicting_Default_Credit_Card_Friska_Andalusia_CASE_6_FINAL.ipynb di Google Colab
 2. Click "Run All" untuk menjalankan semua cells
 3. Monitor progress di output cells
 ```
 
 **Opsi B: Local Jupyter**
 ```bash
-jupyter notebook atka.ipynb
+jupyter notebook Predicting_Default_Credit_Card_Friska_Andalusia_CASE_6_FINAL.ipynb
 # Atau
-jupyter-notebook atka.ipynb
+jupyter-notebook Predicting_Default_Credit_Card_Friska_Andalusia_CASE_6_FINAL.ipynb
 ```
 
 ### 2. Step-by-Step Execution
